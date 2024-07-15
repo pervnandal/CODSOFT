@@ -6,10 +6,16 @@ choice = int(input("Enter you prefered operation choice: \n1 --> Addition \n2 --
 if choice==1:
     print(num1+num2)
 elif choice==2:
-    print(num1-num2)
+    if num1 < num2:
+        print("First number should be greater than second")
+    else:
+        print(num1-num2)
 elif choice==3:
     print(num1*num2)
 elif choice==4:
-    print(num1/num2)
+    if num2==0:
+        print("Error!, you cannot divide anything by zero")
+    else:
+        print(num1/num2)
 else:
     print("Enter a valid input!")
